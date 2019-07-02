@@ -1,6 +1,6 @@
-### Chatspace
+# Chatspace
 
-# Ruby version
+### Ruby version
 ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
 
 ## users table
@@ -10,7 +10,7 @@ ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
 |name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 
-# Association
+### Association
 - has_many :messages
 - has_many :members
 - has_many :group, through::members
@@ -21,7 +21,7 @@ ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
 |------|----|-------|
 |name|string|null: false, unique: true, index|
 
-# Association
+### Association
 - has_many :messages
 - has_many :members
 - has_many :users, through::members
@@ -33,7 +33,7 @@ ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
 
-# Association
+### Association
 - belongs_to :user
 - belongs_to :group
 
@@ -46,6 +46,6 @@ ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
 
-# Association
+### Association
 - belongs_to :user
 - belongs_to :group
