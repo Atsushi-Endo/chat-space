@@ -7,19 +7,19 @@ ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|name|string|null: false, unique: true, index: true|
 |email|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
 - has_many :members
-- has_many :group, through::members
+- has_many :groups, through::members
 
 ## groups table
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true, index|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
