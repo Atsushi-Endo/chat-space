@@ -1,0 +1,36 @@
+.chat-main
+  .chat-header
+    .chat-header__left
+      %p.group TEST
+      %p.user Members: test
+    .chat-header__right
+      %input.edit-btn{ :type => "submit", :value => "Edit" }
+  .chat-body
+    %ul.chat-contents
+      %li.chat-content
+        .chat-content__header
+          .chat-content__name
+            %p ユーザー名
+          .chat-content__date
+            %p 2019/07/07
+        .chat-content__message
+          %p 投稿メッセージ
+      %li.chat-content
+        .chat-content__header
+          .chat-content__name
+            %p ユーザー名
+          .chat-content__date
+            %p 2019/07/07
+        .chat-content__message
+          %p 投稿メッセージ
+  .chat-footer
+    .chat-footer__form
+      .chat-footer__left
+        %textarea{ placeholder: "type a message" }
+        %label
+          .filelabel{ :title => "ファイルを選択" }
+            %i.fa.fa-picture-o
+            %input.filesend{ :type => "file" }
+      .chat-footer__right
+        %input.send-btn{ :type => "submit", :value => "Send" }
+     
