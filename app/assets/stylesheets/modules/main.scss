@@ -1,0 +1,133 @@
+.info {
+  width: 100%;
+  background-color: $skyblue;
+  height: 24px;
+  text-align: center;
+  color: $white;
+}
+
+.chat-main {
+  width: calc(100vw - 300px);
+  float: right;
+  box-sizing: border-box;
+}
+
+.chat-header {
+  height: 100px;
+  padding: 0 40px;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  &__left {
+    margin-top: 35px;
+    display: inline-block;
+    .group {
+      font-size: 20px;
+      color: $black;
+    }
+    .user {
+      font-size: 12px;
+      color: $light-gray;
+      display: flex;
+      margin-top: 15px;
+    }
+  }
+  &__right {
+    .edit-btn {
+      padding: 0 20px;
+      line-height: 40px;
+      color: $skyblue;
+      font-size: 14px;
+      border: 1px solid $skyblue;
+      height: 40px;
+      margin-top: 28px;
+      cursor: pointer;
+    }
+  }
+}
+
+.chat-body {
+  padding: 46px 40px;
+  height: calc(100vh - 190px);
+  overflow: scroll;
+  background-color: #fafafa;  
+  box-sizing: border-box;
+}
+
+.chat-contents {
+  list-style: none;
+  padding-bottom: 40px;
+}
+
+.chat-content {
+  margin-bottom: 40px;
+  &__header {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__name {
+    font-weight: bold;
+    color: $gray;
+    font-size: 16px;
+  }
+  &__date {
+    margin-left: 10px;
+    color: $light-gray;
+    font-size: 12px;
+  }
+  &__message {
+    font-size: 14px;
+    color: $gray;
+    margin-bottom: 10px;
+  }
+}
+
+.chat-footer {
+  height: 90px;
+  padding: 20px 40px;
+  background-color: #ddd;
+  box-sizing: border-box;
+  &__form {
+    display: flex;
+  }
+  &__left {
+    width: 100%;
+    position: relative;
+    display: block;
+  }
+}
+
+.filelabel {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.filesend {
+  display: none;
+}
+
+textarea {
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  color: $gray;
+  border-style: none;
+  line-height: 50px;
+  font-size: 16px;
+}
+    
+.chat-footer__right {
+  .send-btn {
+    height: 50px;
+    width: 100px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: $skyblue;
+    color: $white;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,51 @@
+.chat-side {
+  height: 100vh;
+  width: 300px;
+  float: left;
+  color: $white;
+  box-sizing: border-box;
+}
+
+.chat-user {
+  height: 100px;
+  background-color: #253141;
+  padding: 0 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  box-sizing: border-box;
+
+  &__name {
+    font-weight: bold;
+  }
+  &__action {
+    display: flex;
+    &__group {
+      margin-left: 0.3rem;
+    }
+    &__edit {
+      margin-left: 0.3rem;
+    }
+  }
+}
+
+.chat-groups {
+  padding: 20px 20px 0;
+  overflow: scroll;
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  box-sizing: border-box;
+}
+
+.chat-group {
+  margin-bottom: 40px;
+  font-weight: bold;
+  &__name {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  &__message {
+    font-size: 11px;
+  }
+}
