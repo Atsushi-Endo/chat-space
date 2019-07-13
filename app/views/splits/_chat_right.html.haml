@@ -26,11 +26,10 @@
   .chat-footer
     .chat-footer__form
       .chat-footer__left
-        %textarea{ placeholder: "type a message" }
-        %label
-          .filelabel{ :title => "ファイルを選択" }
-            %i.fa.fa-picture-o
-            %input.filesend{ :type => "file" }
-      .chat-footer__right
-        %input.send-btn{ :type => "submit", :value => "Send" }
-     
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'chat-footer__message', placeholder: 'type a message'
+          .chat-footer__image
+            = f.label :image, class: 'filelabel' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'send-btn'

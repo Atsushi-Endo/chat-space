@@ -1,3 +1,4 @@
+
 .chat-main {
   width: calc(100vw - 300px);
   float: right;
@@ -86,40 +87,49 @@
   &__left {
     width: 100%;
     position: relative;
-    display: block;
   }
 }
 
 .filelabel {
   top: 10px;
-  right: 10px;
+  right: 125px;
   position: absolute;
   font-size: 1.3rem;
   cursor: pointer;
+  float: left;
 }
 
-.filesend {
-  display: none;
-}
-
-textarea {
+.chat-footer__message {
+  box-sizing: border-box;
   height: 50px;
-  width: 100%;
+  width: calc(100vw - 495px);
+  // width: 945px;
+  // width: 89.1%;
   padding-left: 10px;
   color: $gray;
   border-style: none;
   line-height: 50px;
   font-size: 16px;
+  float: left;
 }
-    
-.chat-footer__right {
-  .send-btn {
-    height: 50px;
-    width: 100px;
-    padding: 0 30px;
-    margin-left: 15px;
-    background-color: $skyblue;
-    color: $white;
-    cursor: pointer;
-  }
+
+.hidden {
+  display: none;
 }
+
+.icon {
+  display: inline-block;
+}
+
+.send-btn {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100px;
+  padding: 0 30px;
+  margin-left: 15px;
+  background-color: $skyblue;
+  color: $white;
+  cursor: pointer;
+  float: right;
+}
+
