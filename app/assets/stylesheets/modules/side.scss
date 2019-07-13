@@ -21,6 +21,7 @@
   }
   &__action {
     display: flex;
+    color: $white;
     &__group {
       margin-left: 0.3rem;
     }
@@ -41,6 +42,7 @@
 .chat-group {
   margin-bottom: 40px;
   font-weight: bold;
+  color: $white;
   &__name {
     font-size: 15px;
     margin-bottom: 5px;
@@ -48,4 +50,9 @@
   &__message {
     font-size: 11px;
   }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
 }
