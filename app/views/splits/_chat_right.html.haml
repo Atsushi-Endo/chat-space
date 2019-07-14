@@ -1,28 +1,18 @@
 .chat-main
   .chat-header
     .chat-header__left
-      %p.group TEST
-      %p.user Members: test
+      .group 
+        = @group.name
+      .user
+        %p Members : 
+        - @group.users.each do |user|
+          %li
+            = user.name
+
     .chat-header__right
-      %input.edit-btn{ :type => "submit", :value => "Edit" }
+      = link_to "Edit", edit_group_path(@group), class: 'edit-btn'
   .chat-body
-    %ul.chat-contents
-      %li.chat-content
-        .chat-content__header
-          .chat-content__name
-            %p ユーザー名
-          .chat-content__date
-            %p 2019/07/07
-        .chat-content__message
-          %p 投稿メッセージ
-      %li.chat-content
-        .chat-content__header
-          .chat-content__name
-            %p ユーザー名
-          .chat-content__date
-            %p 2019/07/07
-        .chat-content__message
-          %p 投稿メッセージ
+    = render @messages
   .chat-footer
     .chat-footer__form
       .chat-footer__left
