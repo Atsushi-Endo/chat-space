@@ -18,7 +18,7 @@
       .chat-footer__left
         = form_for [@group, @message] do |f|
           = f.text_field :content, class: 'chat-footer__message', placeholder: 'type a message'
-          .chat-footer__image
+          .chat-footer__send
             = f.label :image, class: 'filelabel' do
               = fa_icon 'picture-o', class: 'icon'
               = f.file_field :image, class: 'hidden'
