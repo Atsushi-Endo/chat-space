@@ -31,8 +31,8 @@ $(function(){
       processData: false,
       contentType: false
       })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(message){
+      var html = buildHTML(message);
       $('.chat-body').append(html)
       $('.chat-body').animate({scrollTop: $(".chat-body")[0].scrollHeight}, 'fast');
       $('.chat-footer__message').val('')
