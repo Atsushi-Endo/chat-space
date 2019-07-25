@@ -35,8 +35,7 @@ $(function(){
       var html = buildHTML(message);
       $('.chat-body').append(html)
       $('.chat-body').animate({scrollTop: $(".chat-body")[0].scrollHeight}, 'fast');
-      $('.chat-footer__message').val('')
-      $('.hidden')  .val('')
+      $('form')[0].reset();
       $('.send-btn').prop('disabled', false);
     })
     .fail(function(){
@@ -60,8 +59,7 @@ $(function(){
         messages.forEach(function (message){
           insertHTML = buildHTML(message);
           $('.chat-body').append(insertHTML);
-          $('.chat-footer__message').val('')
-          $('.hidden')  .val('')    
+          $('form')[0].reset();
           $('.chat-body').animate({scrollTop: $('.chat-body')[0].scrollHeight}, 'fast');
         })
       })
