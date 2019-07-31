@@ -5,8 +5,8 @@ class GroupsController < ApplicationController
   end
 
   def new
+    @users = User.all
     @group = Group.new
-    @group.users << current_user
   end
 
   def create
