@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function(){
   function buildHTML(message){
       image = ( message.image ) ? `<img class='chat-content__image' src=${message.image} >` :"";
@@ -70,3 +71,4 @@ $(function(){
   };
   setInterval(reloadMessages, 5000);
 });
+})
