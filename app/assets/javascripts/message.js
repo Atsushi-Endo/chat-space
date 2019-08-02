@@ -1,7 +1,6 @@
 $(document).on('turbolinks:load', function() {
 $(function(){
   function buildHTML(message){
-      // image = ( message.image ) ? `<img class='chat-content__image' src=${message.image} >` :"";
     var insertImage = '';
       if (message.image_url) {
         insertImage = `<img src="${message.image_url}">`;
