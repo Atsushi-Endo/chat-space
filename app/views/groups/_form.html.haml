@@ -22,10 +22,12 @@
     .chat-group-form__field--left
       %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
+
       #chat-group-users
-        .chat-group-user
-          = current_user.name
-          = f.hidden_field :user_ids, value: current_user.id, name: 'group[user_ids][]'
+        #chat-group-user-22.chat-group-user.clearfix
+        %input{name: current_user.name, type: 'hidden', value: current_user.id}
+        %p.chat-group-user__name
+          =current_user.name
    
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
