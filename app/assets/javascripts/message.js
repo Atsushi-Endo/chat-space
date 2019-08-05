@@ -36,11 +36,15 @@ $(function(){
       var html = buildHTML(message);
       $('.chat-body').append(html)
       $('.chat-body').animate({scrollTop: $(".chat-body")[0].scrollHeight}, 'fast');
-      $('form')[0].reset();
-      $('.send-btn').prop('disabled', false);
     })
+    
     .fail(function(){
       alert('メッセージの送信に失敗しました');
+    })
+
+    .always(function(){
+      $('.send-btn').prop('disabled', false);
+      $('form')[0].reset();
     })
   })
 
