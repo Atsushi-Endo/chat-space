@@ -14,8 +14,8 @@ $(function(){
                     </div>
                     <div class='chat-content__message'>
                       ${message.content}
-                    </div>
                       ${image}
+                    </div>
                   </div>`
     return html;
   }
@@ -37,7 +37,7 @@ $(function(){
       $('.chat-body').append(html)
       $('.chat-body').animate({scrollTop: $(".chat-body")[0].scrollHeight}, 'fast');
     })
-    
+
     .fail(function(){
       alert('メッセージの送信に失敗しました');
     })
