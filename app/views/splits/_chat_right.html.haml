@@ -3,7 +3,8 @@
     .chat-header__left
       .group 
         = @group.name
-      .user= "Members:"
+      .user
+        = "Members: "
         - @group.users.each do |user|
           %span
             =user.name
