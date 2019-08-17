@@ -3,13 +3,13 @@
     .chat-header__left
       .group 
         = @group.name
-      .user
+      .user= "Members:"
         - @group.users.each do |user|
           %span
             =user.name
 
     .chat-header__right
-      = link_to "Edit", edit_group_path(@group), class: 'edit-btn'
+      = link_to "Edit", edit_group_path(@group.id), class: 'edit-btn'
   .chat-body
     = render @messages
   .chat-footer

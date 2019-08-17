@@ -4,7 +4,6 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    # @members = group_member(@group)
     respond_to do |format|
       format.html
       format.json
@@ -36,11 +35,4 @@ class MessagesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-  # def group_member(group)
-  #   members = []
-  #   group.users.each do |member|
-  #     members << member.name
-  #   end
-  #   members = members.join(", ")
-  # end
 end
