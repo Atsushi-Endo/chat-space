@@ -34,15 +34,13 @@
 -#     .chat-group-form__field--right
 -#       = f.submit class: 'chat-group-form__action-btn'
 
-= form_for @group do |f|
-  - if @group.errors.any?
+= form_for group do |f|
+  - if group.errors.any?
     .chat-group-form__errors
-      %h2
-        #{@group.error_message_num}件のエラーが発生しました。
+      %h2="#{@group.error_message_num}件のエラーが発生しました。"
       %ul
-        - @group.error_messages.each do |message|
-          %li
-            = message
+        - group.error_messages.each do |message|
+          %li= message
   .chat-group-form__field
     .chat-group-form__field--left
       = f.label :name, class: 'chat-group-form__label'
