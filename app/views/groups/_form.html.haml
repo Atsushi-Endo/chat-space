@@ -24,9 +24,9 @@
       = f.label :user_ids, "チャットメンバー", class: 'chat-group-form__label'
     .chat-group-form__field--right
       #chat-group-users
-        .chat-group-user.clearfix
+        .chat-group-user.clearfix{ id: "chat-group-user-#{user.id}" }
           = current_user.name
-          = f.hidden_field :user_ids, value: current_user.id, name: 'group[user_ids][]'
+          = f.hidden_field :user_ids, name: 'group[user_ids][]', value: "#{user.id}"
 
       #member_search_result
   .chat-group-form__field.clearfix
