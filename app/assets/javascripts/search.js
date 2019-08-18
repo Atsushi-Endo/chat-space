@@ -90,7 +90,7 @@ $(function() {
       $.ajax({
         url: '/users',
         type: 'GET',
-        data: { members: inputName },
+        data: { keyword: input },
         dataType: 'json'
       })
       .done(function (users) {
