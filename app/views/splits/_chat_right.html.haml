@@ -4,10 +4,9 @@
       .group 
         = @group.name
       .user
-        MEMBER:
-        - @group.users.each do |user|
-          = user.name
-        -# = "Members: #{@members}"
+          Members:
+          - @group.users.each do |user|
+            = user.name
 
     .chat-header__right
       = link_to "Edit", edit_group_path(@group), class: 'edit-btn'
