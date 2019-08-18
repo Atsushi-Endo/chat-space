@@ -1,39 +1,3 @@
--# = form_for group do |f|
--#   - if group.errors.any?
--#     .chat-group-form__errors
--#       %h2= "#{group.errors.full_messages.count}件のエラーが発生しました。"
--#       %ul
--#         - group.errors.full_messages.each do |message|
--#           %li= message
--#   .chat-group-form__field
--#     .chat-group-form__field--left
--#       = f.label :name, class: 'chat-group-form__label'
--#     .chat-group-form__field--right
--#       = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'
-
--#   .chat-group-form__field.clearfix
--#     .chat-group-form__field--left
--#       = f.label :users, "チャットメンバーを追加", class: 'chat-group-form__label', for:'user-search-field'
--#     .chat-group-form__field--right
--#       .chat-group-form__search.clearfix
--#         = f.text_field :users, id: 'user-search-field', class: 'chat-group-form__input', value: '', placeholder: '追加したいユーザー名を入力してください'
--#       #user-search-result
-
--#   .chat-group-form__field.clearfix
--#     .chat-group-form__field--left
--#       = f.label :user_ids, "チャットメンバー", class: 'chat-group-form__label'
--#     .chat-group-form__field--right
--#       #chat-group-users
--#         .chat-group-user.clearfix
--#           = current_user.name
--#           = f.hidden_field :user_ids, value: current_user.id, name: "group[user_ids][]"
-
--#       #member_search_result
--#   .chat-group-form__field.clearfix
--#     .chat-group-form__field--left
--#     .chat-group-form__field--right
--#       = f.submit class: 'chat-group-form__action-btn'
-
 = form_for group do |f|
   - if group.errors.any?
     .chat-group-form__errors
@@ -41,29 +5,30 @@
       %ul
         - group.errors.full_messages.each do |message|
           %li= message
-
   .chat-group-form__field
     .chat-group-form__field--left
       = f.label :name, class: 'chat-group-form__label'
     .chat-group-form__field--right
-      = f.text_field :name, class: 'chat-group-form__input', placeholder: 'グループ名を入力してください'
+      = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      =f.label :users, 'チャットメンバーを追加', class: 'chat-group-form__label'
+      = f.label :users, "チャットメンバーを追加", class: 'chat-group-form__label', for:'user-search-field'
     .chat-group-form__field--right
       .chat-group-form__search.clearfix
-        = f.text_field :group_users, class: 'chat-group-form__input', id: 'user-search-field', placeholder: '追加したいユーザー名を入力してください', value: ''
+        = f.text_field :users, id: 'user-search-field', class: 'chat-group-form__input', value: '', placeholder: '追加したいユーザー名を入力してください'
       #user-search-result
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      = f.label :user_ids, 'チャットメンバー', class: 'chat-group-form__label'
+      = f.label :user_ids, "チャットメンバー", class: 'chat-group-form__label'
     .chat-group-form__field--right
       #chat-group-users
         .chat-group-user.clearfix
-          = f.hidden_field :group_users, name: 'group[user_ids][]', value: "#{user.id}"
+          = current_user.name
+          = f.hidden_field :user_ids, value: current_user.id, multiple: true
 
+      #member_search_result
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
