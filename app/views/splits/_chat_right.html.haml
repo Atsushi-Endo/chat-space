@@ -7,7 +7,7 @@
         = "Members: #{@members}"
 
     .chat-header__right
-      = link_to "Edit", edit_group_path(@group.id), class: 'edit-btn'
+      = link_to "Edit", edit_group_path(@group), class: 'edit-btn'
   .chat-body
     = render @messages
   .chat-footer
