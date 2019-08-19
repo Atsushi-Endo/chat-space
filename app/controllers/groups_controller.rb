@@ -23,8 +23,7 @@ class GroupsController < ApplicationController
 
   def update
     if @group.update(group_params)
-      @group = Group.new(group_params)
-      redirect_to group_messages_path(@group.id), notice: 'グループを編集しました'
+      redirect_to group_messages_path(user.id), notice: 'グループを編集しました'
     else
       render :edit
     end
