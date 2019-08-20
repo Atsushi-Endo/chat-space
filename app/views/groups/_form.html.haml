@@ -24,11 +24,12 @@
       = f.label :user_ids, "チャットメンバー", class: 'chat-group-form__label'
     .chat-group-form__field--right
       #chat-group-users
-        .chat-group-user.clearfix
-          = current_user.name
-          = f.hidden_field :user_ids, value: current_user.id, multiple: true
-          %p.chat-group-user__name
-            =user.name
+        - @group.users.each do |user|
+          .chat-group-user.clearfix
+            = current_user.name
+            = f.hidden_field :user_ids, value: current_user.id, multiple: true
+            %p.chat-group-user__name
+              =user.name
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
