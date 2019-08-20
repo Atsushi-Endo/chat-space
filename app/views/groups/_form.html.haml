@@ -26,7 +26,7 @@
       #chat-group-users
         .chat-group-user.clearfix
           %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{ user.id }"}
-          %p.chat-group-user__name
+          %p
             = user.name
 
   .chat-group-form__field.clearfix
