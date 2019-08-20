@@ -26,11 +26,10 @@
       #chat-group-users
         .chat-group-user.clearfix
           -# = current_user.name
-          = f.hidden_field :user_ids, value: current_user.id, multiple: true
+          = f.hidden_field :user_ids, value: user.id, multiple: true
           %p 
             =user.name
 
-      #member_search_result
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
