@@ -5,8 +5,8 @@
         = @group.name
       .user
         = "Member: "
-          - @group.users.each do |user|
-            = user.name
+        - @group.users.each do |user|
+          = user.name
 
         -# = "Members: #{@members}"
 
