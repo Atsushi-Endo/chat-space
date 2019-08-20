@@ -25,10 +25,9 @@
     .chat-group-form__field--right
       #chat-group-users
         .chat-group-user.clearfix
-          -# = current_user.name
-          = f.hidden_field :user_ids, value: user.id, multiple: true
-          %p 
-            =user.name
+          %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{ user.id }"}
+          %p.chat-group-user__name
+            = user.name
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
