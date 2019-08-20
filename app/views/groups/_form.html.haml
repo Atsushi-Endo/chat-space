@@ -24,12 +24,11 @@
       = f.label :user_ids, "チャットメンバー", class: 'chat-group-form__label'
     .chat-group-form__field--right
       #chat-group-users
-        .chat-group-user.clearfix
         - @group.users.each do |user|
-          = current_user.name
-          = f.hidden_field :user_ids, value: current_user.id, multiple: true
-          %p
-          =user.name
+          #chat-group-user-8.chat-group-user.clearfix.js-chat-member
+            %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{ user.id }"}/
+            %p.chat-group-user__name
+              = user.name
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
